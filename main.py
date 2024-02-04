@@ -8,15 +8,15 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# origins = ["*"]
+origins = ["*"]
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origin=origins,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"]
-# )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origin=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 app.title = "Mi aplicación con  FastAPI"
 app.version = "0.0.1"
 
